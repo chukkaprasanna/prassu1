@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            background-color: #ffffff; /* White outer background */
+background: url("images/photo11.jpg") no-repeat center center fixed;
+             background-size: cover;
+
+
+        }
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .box {
+            width: 50%;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #b3e0ff; /* Light Sky-Blue Color */
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            text-align: center;
+        }
+        .paragraph {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .image {
+            width: 80%;
+            max-width: 300px;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+        .button {
+            width: 80%;
+            padding: 15px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .divider {
+            width: 80%;
+            height: 1px;
+            background-color: gray;
+            margin: 20px auto;
+        }
+        .plus-button {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            background-color: #28a745;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .plus-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">Home</div>
+
+    <div class="box">
+        <p class="paragraph">Health care is main in busy life.</p>
+        <img src="file:///C:/Users/saiku/Downloads/pill.webp" alt="Medication Reminder" class="image"> <!-- Add your image here -->
+        <button class="button" onclick="window.location.href='view_medication.html'">View Medication</button>
+        <div class="divider"></div>
+        <button class="button" onclick="window.location.href='contact.html'">Contact</button>
+        <br>
+        <button class="plus-button" onclick="window.location.href='add_medication.html'">+</button>
+    </div>
+
+</body>
+</html>

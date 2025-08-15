@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+background: url("images/photo11.jpg") no-repeat center center fixed;
+             background-size: cover;
+
+        }
+        .contact-container {
+            background: skyblue;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 350px;
+        }
+        .contact-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .form-group input::placeholder {
+            color: #888;
+        }
+        .form-group textarea {
+            height: 100px;
+            resize: none;
+        }
+        .submit-btn {
+            width: 80px;
+            padding: 8px;
+            background: dodgerblue;
+            color: white;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+        .submit-btn:hover {
+            background: deepskyblue;
+        }
+        .success-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 16px;
+            color: green;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            document.getElementById("success-message").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("success-message").style.display = "none";
+            }, 3000); // Message disappears after 3 seconds
+        }
+    </script>
+</head>
+<body>
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form onsubmit="submitForm(event)">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+    <div id="success-message" class="success-message">Successfully Completed!</div>
+</body>
+</html>
